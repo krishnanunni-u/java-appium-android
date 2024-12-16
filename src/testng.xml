@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Application Test Suite" parallel="methods" thread-count="2">
+
+    <!-- Define Listeners -->
+    <listeners>
+        <!-- Emailable HTML Report -->
+        <listener class-name="org.testng.reporters.EmailableReporter2"/>
+        <!-- Optional: Add more listeners here if needed -->
+    </listeners>
+
+    <!-- Test Definitions -->
+    <test name="Login Test">
+        <parameter name="outputDirectory" value="target/testng-reports"/>
+        <classes>
+            <!-- Specify your test classes -->
+            <class name="tests.LoginTest"/>
+        </classes>
+    </test>
+
+</suite>
